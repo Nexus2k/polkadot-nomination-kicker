@@ -25,7 +25,7 @@ chain_symbol = substrate.token_symbol
 chain_decimals = substrate.token_decimals
 
 print(args.stash_address)
-res = requests.get('https://api-test.polkadot.subvt.io:18900/validator/'+ args.stash_address[0] + '/details')
+res = requests.get('https://api.polkadot.subvt.io:18900/validator/'+ args.stash_address[0] + '/details')
 data = dict(res.json())
 # print(data["validator_details"]["nominations"])
 print("Found %d nominations" % len(data["validator_details"]["nominations"]))
